@@ -58,37 +58,35 @@ extension ViewController {
     
     fileprivate func prepareCamera() {
         self.videoSession = AVCaptureSession()
-        self.videoSession.sessionPreset = AVCaptureSessionPresetPhoto
+        self.videoSession.sessionPreset = AVCaptureSession.Preset.photo
         self.previewLayer = AVCaptureVideoPreviewLayer(session: videoSession)
-        self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
+        self.previewLayer.videoGravity = AVLayerVideoGravity.resizeAspectFill
         
-        if let devices = AVCaptureDevice.devices() as? [AVCaptureDevice] {
-            for device in devices {
-                if device.hasMediaType(AVMediaTypeVideo) {
-                    cameraDevice = device
+        for device in AVCaptureDevice.devices() {
+            if device.hasMediaType(AVMediaType.video) {
+                cameraDevice = device
                     
-                    if cameraDevice != nil  {
-                        do {
-                            let input = try AVCaptureDeviceInput(device: cameraDevice)
+                if cameraDevice != nil  {
+                    do {
+                        let input = try AVCaptureDeviceInput(device: cameraDevice)
                             
                             
-                            if videoSession.canAddInput(input) {
-                                videoSession.addInput(input)
-                            }
-                            
-                            if let previewLayer = self.previewLayer {
-                                if previewLayer.connection.isVideoMirroringSupported {
-                                    previewLayer.connection.automaticallyAdjustsVideoMirroring = false
-                                    previewLayer.connection.isVideoMirrored = true
-                                }
-                                
-                                previewLayer.frame = self.view.bounds
-                                view.layer = previewLayer
-                                view.wantsLayer = true
-                            }
-                        } catch {
-                            print(error.localizedDescription)
+                        if videoSession.canAddInput(input) {
+                            videoSession.addInput(input)
                         }
+                            
+                        if let previewLayer = self.previewLayer {
+                            if let connection = previewLayer.connection {
+                                connection.automaticallyAdjustsVideoMirroring = false
+                                connection.isVideoMirrored = true
+                            }
+                                
+                            previewLayer.frame = self.view.bounds
+                            view.layer = previewLayer
+                            view.wantsLayer = true
+                        }
+                    } catch {
+                        print(error.localizedDescription)
                     }
                 }
             }
@@ -108,7 +106,7 @@ extension ViewController {
 
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     
-    internal func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, from connection: AVCaptureConnection!) {
+    internal func captureOutput(_ captureOutput: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         print(Date())
     }
 }
