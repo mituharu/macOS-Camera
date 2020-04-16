@@ -185,26 +185,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Keyboarder Co.";
 				TargetAttributes = {
 					F07A15C71EADFDC500E8FA1B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = U82TG7992X;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 					F07A15D81EADFDC500E8FA1B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = U82TG7992X;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F07A15C71EADFDC500E8FA1B;
 					};
 					F07A15E31EADFDC500E8FA1B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = U82TG7992X;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 						TestTargetID = F07A15C71EADFDC500E8FA1B;
 					};
@@ -212,7 +212,7 @@
 			};
 			buildConfigurationList = F07A15C31EADFDC500E8FA1B /* Build configuration list for PBXProject "macOS Camera" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -313,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -371,6 +372,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -421,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U82TG7992X;
 				INFOPLIST_FILE = "macOS Camera/Info.plist";
@@ -429,7 +432,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-Camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -437,6 +440,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = U82TG7992X;
 				INFOPLIST_FILE = "macOS Camera/Info.plist";
@@ -445,7 +449,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-Camera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -461,7 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-CameraTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macOS Camera.app/Contents/MacOS/macOS Camera";
 			};
 			name = Debug;
@@ -478,7 +482,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-CameraTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macOS Camera.app/Contents/MacOS/macOS Camera";
 			};
 			name = Release;
@@ -494,7 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-CameraUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "macOS Camera";
 			};
 			name = Debug;
@@ -510,7 +514,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mihailsalari.macOS-CameraUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "macOS Camera";
 			};
 			name = Release;
