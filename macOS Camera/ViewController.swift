@@ -28,6 +28,14 @@ class ViewController: NSViewController {
         self.startSession()
     }
 
+    override func viewWillAppear() {
+        super.viewWillAppear()
+
+        if let window = self.view.window {
+            window.level = .screenSaver
+        }
+    }
+
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
@@ -107,6 +115,8 @@ extension ViewController {
 extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     internal func captureOutput(_ captureOutput: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        #if DEBUG
         print(Date())
+        #endif
     }
 }
