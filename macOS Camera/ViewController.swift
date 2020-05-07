@@ -114,6 +114,20 @@ extension ViewController {
     }
 }
 
+extension ViewController {
+
+    @IBAction func flipHorizontal(_ sender: Any) {
+        if let layer = view.layer {
+            let halfWidth = layer.bounds.width * 0.5
+            let transform = layer.affineTransform()
+                .translatedBy(x:halfWidth, y:0)
+                .scaledBy(x:-1, y:1)
+                .translatedBy(x:-halfWidth, y:0)
+            layer.setAffineTransform(transform)
+        }
+    }
+}
+
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
 
