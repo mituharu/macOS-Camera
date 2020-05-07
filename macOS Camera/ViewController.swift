@@ -25,15 +25,20 @@ class ViewController: NSViewController {
 
         // Do any additional setup after loading the view.
         self.prepareCamera()
-        self.startSession()
     }
 
     override func viewWillAppear() {
-        super.viewWillAppear()
-
         if let window = self.view.window {
             window.level = .screenSaver
         }
+
+        self.startSession()
+        super.viewWillAppear()
+    }
+
+    override func viewWillDisappear() {
+        self.stopSession()
+        super.viewWillDisappear()
     }
 
     override var representedObject: Any? {
